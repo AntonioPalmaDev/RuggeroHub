@@ -6,6 +6,8 @@ import { useToast } from "@/hooks/use-toast";
 import logoSecaMesmo from "@/assets/logo-seca-mesmo.png";
 import logoAlphaCo from "@/assets/logo-alphaco.png";
 import logoProbiotica from "@/assets/logo-probiotica.png";
+import logoTikTok from "@/assets/tiktok.png";
+import logoWhatsApp from "@/assets/whatsapp.png";
 
 const Index = () => {
   const { toast } = useToast();
@@ -63,13 +65,13 @@ const Index = () => {
     },
     {
       name: "TikTok",
-      icon: Music,
+      icon: logoTikTok,
       url: "https://www.tiktok.com/@rugfernandes?_r=1&_t=ZS-91JgMC3i4LI",
       color: "#00F2EA",
     },
     {
       name: "WhatsApp",
-      icon: MessageCircle,
+      icon: logoWhatsApp,
       url: "https://wa.me/557181312609",
       color: "#25D366",
     },
@@ -100,7 +102,7 @@ const Index = () => {
       >
         {/* Header with Logo */}
         <motion.div variants={itemVariants} className="text-center space-y-4">
-          <div className="relative w-48 h-48 mx-auto mb-6">
+          <div className="relative w-64 h-64 mx-auto mb-6">
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse" />
             <img
               src={logoSecaMesmo}
@@ -167,10 +169,18 @@ const Index = () => {
                 variant="outline"
                 className="w-full h-auto py-5 px-6 bg-card hover:bg-card/80 border-2 border-primary/30 hover:border-primary rounded-xl link-button group"
               >
-                <link.icon
-                  className="w-6 h-6 mr-4 text-primary group-hover:scale-110 transition-transform"
-                  style={{ color: link.color }}
-                />
+                {typeof link.icon === "string" ? (
+                  <img
+                    src={link.icon}
+                    alt={`${link.name} icon`}
+                    className="w-6 h-6 mr-4 group-hover:scale-110 transition-transform"
+                  />
+                ) : (
+                  <link.icon
+                    className="w-6 h-6 mr-4 text-primary group-hover:scale-110 transition-transform"
+                    style={{ color: link.color }}
+                  />
+                )}
                 <span className="flex-1 text-left text-foreground font-semibold text-lg">
                   {link.name}
                 </span>
@@ -244,7 +254,7 @@ const Index = () => {
             Transforme seu corpo. Treine em casa. Viva o método Seca Mesmo.
           </p>
           <p className="text-xs text-muted-foreground">
-            © 2025 Seca Mesmo | Desenvolvido por Luis Guilherme GOC
+            © 2025 Seca Mesmo | Desenvolvido por Mock Solutions
           </p>
         </motion.div>
       </motion.div>
