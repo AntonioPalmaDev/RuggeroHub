@@ -50,6 +50,8 @@ const Index = () => {
     },
   };
 
+  const whatsappMessage = "Olá! Tenho interesse no método Seca Mesmo. Podemos falar?";
+
   const socialLinks = [
     {
       name: "Instagram",
@@ -72,7 +74,7 @@ const Index = () => {
     {
       name: "WhatsApp",
       icon: logoWhatsApp,
-      url: "https://wa.me/557181312609",
+      url: `https://wa.me/557181312609?text=${encodeURIComponent(whatsappMessage)}`,
       color: "#25D366",
     },
   ];
