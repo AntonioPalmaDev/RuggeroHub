@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Instagram, Youtube, Music, MessageCircle, ShoppingBag, Share2, Check } from "lucide-react";
+import { Instagram, Youtube, Music, MessageCircle, ShoppingBag, Share2, Check, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import logoSecaMesmo from "@/assets/logo-seca-mesmo.png";
@@ -53,6 +53,12 @@ const Index = () => {
   const whatsappMessage = "Olá! Tenho interesse no método Seca Mesmo. Podemos falar?";
 
   const socialLinks = [
+    {
+      name: "Site Oficial",
+      icon: Globe,
+      url: "https://www.ruggerofernandes.com.br",
+      color: "#F08126",
+    },
     {
       name: "Instagram",
       icon: Instagram,
