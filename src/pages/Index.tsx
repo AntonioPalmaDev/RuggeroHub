@@ -103,25 +103,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground py-8 px-4">
       <motion.div
-        className="max-w-md mx-auto space-y-8"
+        className="max-w-md mx-auto space-y-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Header with Logo */}
         <motion.div variants={itemVariants} className="text-center space-y-4">
-          <div className="relative w-64 h-64 mx-auto mb-6">
+          <div className="relative w-64 h-64 mx-auto flex items-center justify-center">
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse" />
-            <img
-              src={logoSecaMesmo}
-              alt="Seca Mesmo Logo"
-              className="relative w-full h-full object-contain drop-shadow-[0_0_30px_rgba(240,129,38,0.5)]"
-            />
+
+            <h1 className="text-5xl md:text-6xl font-display tracking-wider text-foreground relative">
+              RUGGERO FERNANDES
+            </h1>
           </div>
-          <h1 className="text-5xl md:text-6xl font-display tracking-wider text-foreground">
-            RUGGERO FERNANDES
-          </h1>
-          <div className="h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-primary to-transparent" />
+
         </motion.div>
 
         {/* Bio Section */}
@@ -258,11 +254,9 @@ const Index = () => {
 
         {/* Footer */}
         <motion.div variants={itemVariants} className="text-center space-y-4 pt-6 border-t border-border">
-          <p className="text-lg font-semibold text-primary italic">
-            Transforme seu corpo. Treine em casa. Viva o método Seca Mesmo.
-          </p>
+        
           <p className="text-xs text-muted-foreground">
-            © 2025 Seca Mesmo | Desenvolvido por Mock Solutions
+            © 2025 Ruggero Fernandes | Desenvolvido por Codiva Tech
           </p>
         </motion.div>
       </motion.div>
