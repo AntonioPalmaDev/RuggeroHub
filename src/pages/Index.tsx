@@ -53,12 +53,12 @@ const Index = () => {
   const whatsappMessage = "Olá! Tenho interesse no método Seca Mesmo. Podemos falar?";
 
   const socialLinks = [
-    {
-      name: "Site Oficial",
-      icon: Globe,
-      url: "https://www.ruggerofernandes.com.br",
-      color: "#F08126",
-    },
+    // {
+    //   name: "Site Oficial",
+    //   icon: Globe,
+    //   url: "https://www.ruggerofernandes.com.br",
+    //   color: "#F08126",
+    // },
     {
       name: "Instagram",
       icon: Instagram,
@@ -139,7 +139,7 @@ const Index = () => {
         {/* Main CTA - Hotmart */}
         <motion.div variants={itemVariants}>
           <a
-            href="https://pay.hotmart.com/Y95512578P"
+            href="https://www.ruggerofernandes.com.br/"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
